@@ -29,7 +29,7 @@ export function ThemeToggle() {
       variant="outline"
       size="icon"
       onClick={toggleTheme}
-      className="relative bg-indian-gradient border-indian text-white hover:opacity-80 transition-opacity"
+      className="relative bg-indian-gradient border-indian hover:opacity-80 transition-opacity"
       title={`Switch to ${theme === "light" ? "dark" : "light"} mode`}
     >
       <Sun className="h-[1.2rem] w-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0" />

@@ -39,8 +39,8 @@ export function AdminDashboard() {
       <header className="border-b border-border bg-indian-gradient">
         <div className="flex h-16 items-center px-6">
           <div className="flex items-center gap-2">
-            <Shield className="h-6 w-6 text-white" />
-            <h1 className="text-xl font-semibold text-balance text-white">KAVACH - Military Command Center</h1>
+            <Shield className="h-6 w-6 " />
+            <h1 className="text-xl font-semibold text-balance">KAVACH - Military Command Center</h1>
           </div>
           <div className="ml-auto flex items-center gap-4">
             <div className="relative">
@@ -51,7 +51,7 @@ export function AdminDashboard() {
               />
             </div>
             <ThemeToggle />
-            <Button variant="outline" size="sm" className="border-white/20 text-white hover:bg-white/10 bg-transparent">
+            <Button variant="outline" size="sm" className="border-white/20 hover:bg-white/10 bg-transparent">
               <Settings className="h-4 w-4" />
             </Button>
           </div>
@@ -64,7 +64,7 @@ export function AdminDashboard() {
           <nav className="p-4 space-y-2">
             <Button
               variant={activeTab === "overview" ? "secondary" : "ghost"}
-              className={`w-full justify-start ${activeTab === "overview" ? "bg-white/20 text-white" : "text-white/90 hover:bg-white/10"}`}
+              className={`w-full justify-start ${activeTab === "overview" ? "bg-white/20 text-foreground" : "text-foreground/90 hover:bg-white/10"}`}
               onClick={() => setActiveTab("overview")}
             >
               <Activity className="h-4 w-4 mr-2" />
@@ -72,7 +72,7 @@ export function AdminDashboard() {
             </Button>
             <Button
               variant={activeTab === "messaging" ? "secondary" : "ghost"}
-              className={`w-full justify-start ${activeTab === "messaging" ? "bg-white/20 text-white" : "text-white/90 hover:bg-white/10"}`}
+              className={`w-full justify-start ${activeTab === "messaging" ? "bg-white/20 text-foreground" : "text-foreground/90 hover:bg-white/10"}`}
               onClick={() => setActiveTab("messaging")}
             >
               <MessageSquare className="h-4 w-4 mr-2" />
@@ -80,7 +80,7 @@ export function AdminDashboard() {
             </Button>
             <Button
               variant={activeTab === "personnel" ? "secondary" : "ghost"}
-              className={`w-full justify-start ${activeTab === "personnel" ? "bg-white/20 text-white" : "text-white/90 hover:bg-white/10"}`}
+              className={`w-full justify-start ${activeTab === "personnel" ? "bg-white/20 text-foreground" : "text-foreground/90 hover:bg-white/10"}`}
               onClick={() => setActiveTab("personnel")}
             >
               <UserCheck className="h-4 w-4 mr-2" />
@@ -88,7 +88,7 @@ export function AdminDashboard() {
             </Button>
             <Button
               variant={activeTab === "teams" ? "secondary" : "ghost"}
-              className={`w-full justify-start ${activeTab === "teams" ? "bg-white/20 text-white" : "text-white/90 hover:bg-white/10"}`}
+              className={`w-full justify-start ${activeTab === "teams" ? "bg-white/20 text-foreground" : "text-foreground/90 hover:bg-white/10"}`}
               onClick={() => setActiveTab("teams")}
             >
               <Users className="h-4 w-4 mr-2" />
@@ -96,7 +96,7 @@ export function AdminDashboard() {
             </Button>
             <Button
               variant={activeTab === "deployment" ? "secondary" : "ghost"}
-              className={`w-full justify-start ${activeTab === "deployment" ? "bg-white/20 text-white" : "text-white/90 hover:bg-white/10"}`}
+              className={`w-full justify-start ${activeTab === "deployment" ? "bg-white/20 text-foreground" : "text-foreground/90 hover:bg-white/10"}`}
               onClick={() => setActiveTab("deployment")}
             >
               <MapPin className="h-4 w-4 mr-2" />
@@ -104,17 +104,17 @@ export function AdminDashboard() {
             </Button>
             <Button
               variant={activeTab === "operations" ? "secondary" : "ghost"}
-              className={`w-full justify-start ${activeTab === "operations" ? "bg-white/20 text-white" : "text-white/90 hover:bg-white/10"}`}
+              className={`w-full justify-start ${activeTab === "operations" ? "bg-white/20 text-foreground" : "text-foreground/90 hover:bg-white/10"}`}
               onClick={() => setActiveTab("operations")}
             >
               <Radio className="h-4 w-4 mr-2" />
               Operations Monitor
             </Button>
             <div className="border-t border-white/20 pt-2 mt-4">
-              <p className="text-xs font-medium text-white/70 mb-2 px-2">ADMIN CONTROLS</p>
+              <p className="text-xs font-medium mb-2 px-2">ADMIN CONTROLS</p>
               <Button
                 variant={activeTab === "member-approval" ? "secondary" : "ghost"}
-                className={`w-full justify-start ${activeTab === "member-approval" ? "bg-white/20 text-white" : "text-white/90 hover:bg-white/10"}`}
+                className={`w-full justify-start ${activeTab === "member-approval" ? "bg-white/20 text-foreground" : "text-foreground/90 hover:bg-white/10"}`}
                 onClick={() => setActiveTab("member-approval")}
               >
                 <UserCog className="h-4 w-4 mr-2" />
@@ -122,7 +122,7 @@ export function AdminDashboard() {
               </Button>
               <Button
                 variant={activeTab === "message-monitoring" ? "secondary" : "ghost"}
-                className={`w-full justify-start ${activeTab === "message-monitoring" ? "bg-white/20 text-white" : "text-white/90 hover:bg-white/10"}`}
+                className={`w-full justify-start ${activeTab === "message-monitoring" ? "bg-white/20 text-foreground" : "text-foreground/90 hover:bg-white/10"}`}
                 onClick={() => setActiveTab("message-monitoring")}
               >
                 <Eye className="h-4 w-4 mr-2" />
@@ -145,62 +145,62 @@ export function AdminDashboard() {
               <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4">
                 <Card className="bg-forest-gradient border-indian">
                   <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                    <CardTitle className="text-sm font-medium text-white">Active Personnel</CardTitle>
-                    <UserCheck className="h-4 w-4 text-white/80" />
+                    <CardTitle className="text-sm font-medium ">Active Personnel</CardTitle>
+                    <UserCheck className="h-4 w-4 " />
                   </CardHeader>
                   <CardContent>
-                    <div className="text-2xl font-bold text-white">247</div>
-                    <p className="text-xs text-white/70">12 deployed, 235 on base</p>
+                    <div className="text-2xl font-bold">247</div>
+                    <p className="text-xs ">12 deployed, 235 on base</p>
                   </CardContent>
                 </Card>
 
                 <Card className="bg-saffron-gradient border-indian">
                   <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                    <CardTitle className="text-sm font-medium text-white">Secure Comms</CardTitle>
-                    <Radio className="h-4 w-4 text-white/80" />
+                    <CardTitle className="text-sm font-medium">Secure Comms</CardTitle>
+                    <Radio className="h-4 w-4 " />
                   </CardHeader>
                   <CardContent>
                     <div className="flex items-center gap-2">
-                      <CheckCircle className="h-4 w-4 text-white" />
-                      <span className="text-sm text-white">Operational</span>
+                      <CheckCircle className="h-4 w-4 " />
+                      <span className="text-sm ">Operational</span>
                     </div>
-                    <p className="text-xs text-white/70 mt-1">18 active channels</p>
+                    <p className="text-xs  mt-1">18 active channels</p>
                   </CardContent>
                 </Card>
 
                 <Card className="bg-indian-gradient border-indian">
                   <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
                     <CardTitle className="text-sm font-medium text-white">Active Teams</CardTitle>
-                    <Users className="h-4 w-4 text-white/80" />
+                    <Users className="h-4 w-4 " />
                   </CardHeader>
                   <CardContent>
-                    <div className="text-2xl font-bold text-white">8</div>
-                    <p className="text-xs text-white/70">Alpha, Bravo, Charlie active</p>
+                    <div className="text-2xl font-bold ">8</div>
+                    <p className="text-xs ">Alpha, Bravo, Charlie active</p>
                   </CardContent>
                 </Card>
 
                 <Card className="bg-forest-gradient border-indian">
                   <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
-                    <CardTitle className="text-sm font-medium text-white">Mission Status</CardTitle>
-                    <AlertTriangle className="h-4 w-4 text-white/80" />
+                    <CardTitle className="text-sm font-medium text-foreground">Mission Status</CardTitle>
+                    <AlertTriangle className="h-4 w-4 text-foreground/80" />
                   </CardHeader>
                   <CardContent>
                     <div className="flex items-center gap-2">
-                      <CheckCircle className="h-4 w-4 text-white" />
-                      <span className="text-sm text-white">All Clear</span>
+                      <CheckCircle className="h-4 w-4 text-foreground" />
+                      <span className="text-sm text-foreground">All Clear</span>
                     </div>
-                    <p className="text-xs text-white/70 mt-1">No active alerts</p>
+                    <p className="text-xs text-foreground/70 mt-1">No active alerts</p>
                   </CardContent>
                 </Card>
               </div>
 
               <Card className="border-indian">
                 <CardHeader className="bg-indian-gradient">
-                  <CardTitle className="flex items-center gap-2 text-white">
+                  <CardTitle className="flex items-center gap-2 text-foreground">
                     <Lock className="h-5 w-5" />
                     Security & Access Control
                   </CardTitle>
-                  <CardDescription className="text-white/80">
+                  <CardDescription className="text-foreground/80">
                     Admin oversight of secure communications and member access
                   </CardDescription>
                 </CardHeader>
@@ -208,30 +208,30 @@ export function AdminDashboard() {
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                     <div className="p-4 border border-indian rounded-lg bg-saffron-gradient">
                       <div className="flex items-center gap-2 mb-2">
-                        <UserCog className="h-4 w-4 text-white" />
-                        <span className="font-medium text-white">Pending Approvals</span>
+                        <UserCog className="h-4 w-4 text-foreground" />
+                        <span className="font-medium text-foreground">Pending Approvals</span>
                       </div>
-                      <div className="text-2xl font-bold text-white">3</div>
-                      <p className="text-xs text-white/70">Members awaiting verification</p>
+                      <div className="text-2xl font-bold textforeground">3</div>
+                      <p className="text-xs text-foreground/70">Members awaiting verification</p>
                     </div>
                     <div className="p-4 border border-indian rounded-lg bg-forest-gradient">
                       <div className="flex items-center gap-2 mb-2">
-                        <Eye className="h-4 w-4 text-white" />
-                        <span className="font-medium text-white">Messages Monitored</span>
+                        <Eye className="h-4 w-4 text-foregrounde" />
+                        <span className="font-medium text-foreground">Messages Monitored</span>
                       </div>
-                      <div className="text-2xl font-bold text-white">247</div>
-                      <p className="text-xs text-white/70">Metadata tracked today</p>
+                      <div className="text-2xl font-bold text-foreground">247</div>
+                      <p className="text-xs text-foreground/70">Metadata tracked today</p>
                     </div>
                     <div className="p-4 border border-indian rounded-lg bg-indian-gradient">
                       <div className="flex items-center gap-2 mb-2">
-                        <Shield className="h-4 w-4 text-white" />
-                        <span className="font-medium text-white">Encryption Status</span>
+                        <Shield className="h-4 w-4 text-foreground" />
+                        <span className="font-medium text-foreground">Encryption Status</span>
                       </div>
                       <div className="flex items-center gap-2">
-                        <CheckCircle className="h-4 w-4 text-white" />
-                        <span className="text-sm text-white">Active</span>
+                        <CheckCircle className="h-4 w-4 text-foreground" />
+                        <span className="text-sm text-foreground">Active</span>
                       </div>
-                      <p className="text-xs text-white/70">End-to-end secured</p>
+                      <p className="text-xs text-foreground/70">End-to-end secured</p>
                     </div>
                   </div>
                 </CardContent>
@@ -246,21 +246,21 @@ export function AdminDashboard() {
                 <CardContent>
                   <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
                     <Button
-                      className="h-20 flex-col gap-2 bg-saffron-gradient hover:opacity-90 text-white border-indian"
+                      className="h-20 flex-col gap-2 bg-saffron-gradient hover:opacity-90 text-foreground border-indian"
                       onClick={() => setActiveTab("member-approval")}
                     >
                       <UserCog className="h-6 w-6" />
                       Approve Members
                     </Button>
                     <Button
-                      className="h-20 flex-col gap-2 bg-forest-gradient hover:opacity-90 text-white border-indian"
+                      className="h-20 flex-col gap-2 bg-forest-gradient hover:opacity-90 text-foreground border-indian"
                       onClick={() => setActiveTab("message-monitoring")}
                     >
                       <Eye className="h-6 w-6" />
                       Monitor Messages
                     </Button>
                     <Button
-                      className="h-20 flex-col gap-2 bg-indian-gradient hover:opacity-90 text-white border-indian"
+                      className="h-20 flex-col gap-2 bg-indian-gradient hover:opacity-90 text-foreground border-indian"
                       onClick={() => setActiveTab("teams")}
                     >
                       <Users className="h-6 w-6" />
